@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
     char dll[256];
     std::cout << "Launching the program...\n";
 
-    wprintf(L"Введите имя процесса (например, stalcraft.exe): ");
+    wprintf(L"Write name DLL (for example, stalcraft.exe): ");
     fgetws(processName, 256, stdin);
     // Удаляем символ новой строки, если он есть
     size_t len = wcslen(processName);
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
         printf("A process with a PID was found: %d\n", pID);
     }
 
-    printf("Введите имя DLL (например, dorian_client.dll): ");
+    printf("Write name DLL (for example, dorian_client.dll): ");
     fgets(dll, sizeof(dll), stdin);
     len = strlen(dll);
     if (len > 0 && dll[len - 1] == '\n') {
